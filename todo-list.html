@@ -39,22 +39,21 @@
             let itemValue = document.querySelector('.myinput').value;
             let li = document.createElement('li');
             
-            let item = {
-                itemName: itemValue,
-                id: Date.now()
-                 ,
-            }
-            data.unshift(item);
+            // let item = {
+            //     itemName: itemValue,
+            //     id: Date.now()
+            //      ,
+            // }
+            // data.unshift(item);
 
-            li.innerHTML = `<span>${item.itemName}</span><button class="delete" onClick="deletebtn(this)">X</button>`;
+            li.innerHTML = `<span>${item.itemName}</span><button class="delete" onClick="dlete(this)">X</button>`;
             ul.insertBefore(li,ul.childNodes[0]);
 
         }) ; 
 
         
-        function deletebtn(e){
+        function dlete(e){
             e.parentElement.remove();
-            console.log("here");
         }
     </script>
 </body>
