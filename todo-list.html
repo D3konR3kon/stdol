@@ -29,7 +29,7 @@
     
 
     <script>
-        let data = [];
+        
         let btn = document.querySelector('.addbtn');
         let del = document.querySelector('.delete');
         
@@ -39,12 +39,7 @@
             let itemValue = document.querySelector('.myinput').value;
             let li = document.createElement('li');
             
-            // let item = {
-            //     itemName: itemValue,
-            //     id: Date.now()
-            //      ,
-            // }
-            // data.unshift(item);
+            
 
             li.innerHTML = `<span>${item.itemName}</span><button class="delete" onClick="dlete(this)">X</button> <button onClick="edit(this)">Edit</button>`;
             ul.insertBefore(li,ul.childNodes[0]);
