@@ -46,12 +46,15 @@
             // }
             // data.unshift(item);
 
-            li.innerHTML = `<span>${item.itemName}</span><button class="delete" onClick="dlete(this)">X</button>`;
+            li.innerHTML = `<span>${item.itemName}</span><button class="delete" onClick="dlete(this)">X</button> <button onClick="edit(this)">Edit</button>`;
             ul.insertBefore(li,ul.childNodes[0]);
 
         }) ; 
 
-        
+        function edit(e){
+            let update = promnt("Update Task: ",);
+            e.parentElement.childNodes[0].innerHTML = update;
+        }
         function dlete(e){
             e.parentElement.remove();
         }
