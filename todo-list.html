@@ -11,7 +11,9 @@
             width: 60%;
             margin: auto;
         }
-
+        button{
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -38,16 +40,20 @@
             let ul = document.querySelector('.myul');
             let itemValue = document.querySelector('.myinput').value;
             let li = document.createElement('li');
-            
+            if(!itemValue){
+                alert("Please provide a value");
+                return;
+            }
             
 
-            li.innerHTML = `<span>${item.itemName}</span><button class="delete" onClick="dlete(this)">X</button> <button onClick="edit(this)">Edit</button>`;
+            li.innerHTML = `<span>${itemValue}</span><button class="delete" onClick="dlete(this)">X</button> <button onClick ="edit(this)">Edit</button>`;
             ul.insertBefore(li,ul.childNodes[0]);
 
         }) ; 
 
         function edit(e){
-            let update = promnt("Update Task: ",);
+            let update = prompt("Update Task: ",);
+            if(!update) return;
             e.parentElement.childNodes[0].innerHTML = update;
         }
         function dlete(e){
@@ -55,4 +61,4 @@
         }
     </script>
 </body>
-</html>
+</htm
